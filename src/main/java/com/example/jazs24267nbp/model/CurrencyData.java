@@ -20,9 +20,9 @@ public class CurrencyData {
     private double average;
     @Schema(description = "Data oraz godzina wyslania zapytania")
     private LocalDateTime request_datetime;
-@Schema(description = "Data rozpoczynajaca przedzial dla liczenia kursu sredniego.")
+    @Schema(description = "Data rozpoczynajaca przedzial dla liczenia kursu sredniego.")
     private String start_date;
-@Schema(description = "Data konczaca przedzial dla liczenia kursu sredniego.")
+    @Schema(description = "Data konczaca przedzial dla liczenia kursu sredniego.")
     private String end_date;
 
     public Long getId() {

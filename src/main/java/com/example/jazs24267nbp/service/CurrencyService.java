@@ -11,14 +11,15 @@ import java.util.List;
 
 @Service
 public class CurrencyService {
-private final RestTemplate restTemplate;
-private final CurrencyDataRepository currencyDataRepository;
-private static final String apiNBPurl = "http://api.nbp.pl/api/exchangerates/rates";
+    private final RestTemplate restTemplate;
+    private final CurrencyDataRepository currencyDataRepository;
+    private static final String apiNBPurl = "http://api.nbp.pl/api/exchangerates/rates";
 
     public CurrencyService(RestTemplate restTemplate, CurrencyDataRepository currencyDataRepository) {
         this.restTemplate = restTemplate;
         this.currencyDataRepository = currencyDataRepository;
     }
+
     public NbpResponseData getCurrencyRates(String table, String code, String start_date, String end_date) {
         String url = String.format("%s/%s/%s/%s/%s", apiNBPurl, table, code, start_date, end_date);
         return restTemplate.getForObject(url, NbpResponseData.class);
@@ -29,7 +30,7 @@ private static final String apiNBPurl = "http://api.nbp.pl/api/exchangerates/rat
                 .orElseThrow(() -> new RuntimeException("Nie można obliczyć średniego kursu"));
     }
 
-    public CurrencyData saveCurrencyData(String currency, String start_date, String end_date , double average) {
+    public CurrencyData saveCurrencyData(String currency, String start_date, String end_date, double average) {
         CurrencyData item = new CurrencyData();
         item.setCurrency(currency);
         item.setStart_date(start_date);

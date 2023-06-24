@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 @SpringBootApplication
 public class JazS24267NbpApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(JazS24267NbpApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(JazS24267NbpApplication.class, args);
+    }
 
 }

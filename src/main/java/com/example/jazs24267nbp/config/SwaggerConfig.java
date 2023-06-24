@@ -12,7 +12,7 @@ public class SwaggerConfig {
         Info info = new Info()
                 .title("NBP REST API")
                 .version("1.0")
-                .description("Api wystawia endpoint do wyliczania sredniego kursu dla zadanych dat.");
+                .description("Api wystawia endpoint do wyliczania sredniego kursu dla podanego przedzialu dat.");
         return new OpenAPI().info(info);
 
     }
