@@ -1,14 +1,12 @@
 package com.example.jazs24267nbp.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Table()
 public class CurrencyData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

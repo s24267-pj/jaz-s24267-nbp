@@ -13,7 +13,7 @@ import java.util.List;
 public class CurrencyService {
     private final RestTemplate restTemplate;
     private final CurrencyDataRepository currencyDataRepository;
-    private static final String apiNBPurl = "http://api.nbp.pl/api/exchangerates/rates";
+    private static final String apiNBPurl = "http://api.nbp.pl/api/exchangerates/tables";
 
     public CurrencyService(RestTemplate restTemplate, CurrencyDataRepository currencyDataRepository) {
         this.restTemplate = restTemplate;
